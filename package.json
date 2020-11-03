@@ -1,0 +1,8 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Bosik-R/websocket.git",
+  "author": "Tomasz Rosik <Bosik27@gmail.com>",
+  "license": "MIT"
+}
