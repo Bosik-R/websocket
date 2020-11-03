@@ -1,21 +1,20 @@
 const loginForm = document.getElementById('welcome-form');
-const messegesSection = document.getElementById('messages-section');
+const messagesSection = document.getElementById('messages-section');
 const messagesList = document.getElementById('messages-list');
 const addMessageForm = document.getElementById('add-messages-form');
 const userNameInput = document.getElementById('username');
 const messageContentInput = document.getElementById('message-content');
-messageContentInput.autocomplete = 'off';
 
-let userName;
+const userName;
 
-const login = (e) => {
+const login = e => {
   e.preventDefault();
   if(userNameInput.value.length > 0) {
     userName = userNameInput.value;
     loginForm.classList.remove('show');
-    messegesSection.classList.add('show');
+    messagesSection.classList.add('show');
   } else {
-    alert('Please enter user name')
+    alert('Please enter user name');
   }
 };
 
@@ -25,7 +24,7 @@ const sendMessage = (e) => {
     addMessage(userName, messageContentInput.value);
     messageContentInput.value = '';
   } else {
-    alert('please type a message')
+    alert('please type a message');
   }
 };
 
@@ -53,10 +52,10 @@ addMessage = (author, content) => {
   messagesList.appendChild(message);
 }
 
-loginForm.addEventListener('submit', function(e){
+loginForm.addEventListener('submit', function(e) {
   login(e);
 });
 
-addMessageForm.addEventListener('submit', function(e){
+addMessageForm.addEventListener('submit', e => {
   sendMessage(e);
 });
